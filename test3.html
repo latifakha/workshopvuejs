@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> </title>
+</head>
+	<body>
+		<div id = "root">
+			<!--we can use v-bind ou just : it's the equal-->
+			<button :title= "title"> Hover Over Me</button>
+
+		</div>
+		
+
+		<script src="vue.js"></script>
+	</body>
+
+		<script>
+			var app = new Vue({
+				el: '#root',
+				data: {
+					title:' Now the title is being set through JavaScript.'
+					},
+				
+			})
+
+		</script>
+</html>

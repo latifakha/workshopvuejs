@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> </title>
+</head>
+	<body>
+		<div id = "root">
+			<!-- 1* -->
+			<ul v-for="fam in familly">
+				<li> {{fam}}</li>
+			</ul>
+				<!--it's like 1*  you can use just one
+			<ul>
+				<li v-for="fam in familly" v-text="fam">
+				</li>
+			</ul>
+			-->
+			 <input type="text" v-model="newMembre" />
+			  <!--<button v-on:click="addMembre"> Add new membre</button> this ligne it's like the next we can use v-on or @ -->
+
+			  <button @click="addMembre"> Add new membre</button>
+
+			
+
+		</div>
+		
+
+		<script src="vue.js"></script>
+	</body>
+
+		<script>
+			new Vue({
+				el: '#root',
+				data: {
+					newMembre:'',
+					familly:['mother','father','sister','son','brother','daughter','unt','oncle']
+						},
+				methods: {
+					addMembre(){
+								this.familly.push(this.newMembre);
+
+								}
+						},
+			})
+
+		</script>
+</html>
