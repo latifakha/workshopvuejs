@@ -31,7 +31,8 @@
 						{description: 'Go to the store', completed: true},
 						{description: 'description2', completed: false},
 						{description: 'description3', completed: false},
-						{description: 'description4', completed: false},
+						{description: 'description4', completed: 
+						false},
 						{description: 'description5', completed: false},
 						{description: 'description6', completed: true},
 					]
