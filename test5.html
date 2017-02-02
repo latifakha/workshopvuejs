@@ -10,9 +10,18 @@
 </head>
 	<body>
 		<div id = "root">
+			<h1> All tasks</h1>
 			<ul>
+				<!--
+				<li v-for="task in tasks"  v-if="task.completed"v-text="task.description"> </li> -->
 				<li v-for="task in tasks" v-text="task.description"> </li>
 			</ul>
+
+			<h2> Incomplete Tasks</h2>
+			<ul>
+				<li v-for="task in incompleteTasks" v-text="task.description"> </li>
+			</ul>
+
 		</div>
 		
 
@@ -32,17 +41,21 @@
 						{description: 'description6', completed: true}
 					]
 					},
+					/*
 				methods: {
 					toggleClass() {
 						this.isloading=true
                                   }
-                           }
+                           }*/
 
-				/*computed: {
-					reversedMessage() {
-						return this.message.split('').reverse().join('');
+				computed: {
+					incompleteTasks() {
+						return this.tasks.filter(task => !task.completed);
+						/*this.tasks.filter(function(task){
+							return !task.completed;
+						})*/
 									}
-							}*/
+							}
 						
 				
 			});
