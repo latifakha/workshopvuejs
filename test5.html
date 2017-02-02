@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> </title>
+	<style>
+		.color-red { color: red; }
+		.color-blue { color: blue;}
+		.is-loading { background: red;}
+	</style>
+</head>
+	<body>
+		<div id = "root">
+			<ul>
+				<li v-for="task in tasks" v-text="task.description"> </li>
+			</ul>
+		</div>
+		
+
+		<script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+	</body>
+
+		<script>
+			var app = new Vue({
+				el: '#root',
+				data: {
+					tasks:[
+						{description:'Go to the store', completed: true},
+						{description: 'description2', completed: false},
+						{description: 'description3', completed: false},
+						{description: 'description4', completed: false},
+						{description: 'description5', completed: false},
+						{description: 'description6', completed: true}
+					]
+					},
+				methods: {
+					toggleClass() {
+						this.isloading=true
+                                  }
+                           }
+
+				/*computed: {
+					reversedMessage() {
+						return this.message.split('').reverse().join('');
+									}
+							}*/
+						
+				
+			});
+
+		</script>
+</html>
